@@ -52,7 +52,7 @@ for index, row in enumerate(table[1957:]):
         # table[i+1][-1]=file_name
         # table[i+1].append(pdf_link)
 
-        with http.request("GET", pdf_link) as response, open('/'.join(['pdf_prospectus', file_name]), 'wb') as pdf:
+        with http.request("GET", pdf_link) as response, open('/'.join(['dl_prospectus', file_name]), 'wb') as pdf:
             pdf.write(response.data)
 
         print(' '.join([str(index) + '.', file_name, 'is downloaded!']))
